@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="Fieldfin.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:Fieldfin"
+    xmlns:ViewLogin="clr-namespace:Fieldfin.View.Login"
+    xmlns:ViewFieldUser="clr-namespace:Fieldfin.View.FieldUser"
+    Shell.FlyoutBehavior="Flyout"
+    Title="Fieldfin">
+
+    <ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" 
+        />
+
+
+
+    <FlyoutItem Title="A" >
+        <ShellContent ContentTemplate="{DataTemplate ViewLogin:Login}">
+
+        </ShellContent>
+    </FlyoutItem>
+
+    <FlyoutItem Title="A" >
+        <ShellContent ContentTemplate="{DataTemplate ViewFieldUser:UserDashboard}">
+
+        </ShellContent>
+    </FlyoutItem>
+
+
+</Shell>
